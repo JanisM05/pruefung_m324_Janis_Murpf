@@ -4,28 +4,18 @@ import pluginJs from '@eslint/js';
 // console.log("pluginJs.configs.recommended", pluginJs.configs.recommended);
 export default [
   {
-    languageOptions:
-      {
-        globals:
-          {
-            ...globals.browser,
-            ...globals.mocha,
-          },
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.mocha,
       },
+    },
   },
-  pluginJs
-    .configs
-    .recommended,
+  pluginJs.configs.recommended,
   {
-    rules:
-      {
-        eqeqeq:
-          [
-            'error',
-            'always',
-          ], // Enforce === and !== over == and !=
-        'no-var':
-          'error', // Disallow the use of var
-      },
+    rules: {
+      eqeqeq: ['error', 'always'], // Enforce === and !== over == and !=
+      'no-var': 'error', // Disallow the use of var
+    },
   },
 ];
